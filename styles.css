@@ -1,0 +1,87 @@
+* {
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #343a40;
+	scroll-behavior: auto;
+}
+.container-fluid {
+	background: #343a40;
+	padding: 20px !important;
+	width: auto;
+	height: 640px;
+	position: relative;
+	display: flex;
+	float: inline-start;
+	display: center;
+	justify-content: center;
+}
+
+.container-md {
+	margin: 18rem;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.memory-game {
+	width: 640px;
+	height: 640px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+.memory-card {
+	width: calc(25% - 10px);
+	height: calc(33.333% - 10px);
+	margin: 5px;
+	position: relative;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+.memory-card:active {
+	transform: scale(0.97);
+	transition: transform 0.2s;
+}
+
+.front-face,
+.back-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	border-radius: 5px;
+	background: #1c7ccc;
+	backface-visibility: hidden;
+}
+.front-face {
+	transform: rotateY(180deg);
+}
+
+img {
+	width: 100px;
+}
+
+.memory-card.flip {
+	transform: rotateY(180deg);
+}
+
+body > div.container-md > button:nth-child(2) {
+	margin: 10px;
+}
+body > div.container-md > button:nth-child(1) {
+	margin: 9px;
+}
+h1 {
+	padding-left: 25px;
+	font-family: 'Abril Fatface', cursive;
+	color: #3861fb;
+	text-transform: lowercase;
+	text-shadow: 2px 2px 5px #fff;
+}
