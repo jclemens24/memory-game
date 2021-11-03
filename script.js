@@ -65,17 +65,3 @@ function shuffleCards() {
 
 cards.forEach((card) => card.addEventListener('click', flipCard));
 
-//Let Start Button Reset Game and Cards
-let startBtn = document.getElementById('start');
-startBtn.addEventListener('click', function () {
-	cards.forEach((card) => {
-		card.classList.remove('flip');
-	});
-	shuffleCards();
-});
-
-resetBtn.addEventListener('click', function () {
-	cards.forEach((card) => {
-		card.classList.remove('flip');
-	});
-});
